@@ -1,14 +1,14 @@
 <template>
-   <div>
+   <header>
      <div>
-       <img src="" alt="">
+       <img src="../assets/img/dc-logo.png" alt="">
      </div>
      <div class="menu-right">
         <ul>
           <li v-for="(item,index) in menuList" :key="index">{{item}}</li>     
         </ul>
       </div> 
-   </div>
+   </header>
 </template>
      
 
@@ -37,7 +37,11 @@ export default {
 </script>
 
 <style lang="scss">
-
+header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .menu-right{
   width:60%;
   font-size:10px;
