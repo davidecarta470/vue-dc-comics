@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style leng="scss" scoped>
+<style scoped leng="scss" >
 ul{
   display:flex;
   justify-content: space-between;
