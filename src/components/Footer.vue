@@ -1,6 +1,6 @@
 <template>
-  <footer>
-    <div class="top-footer">
+  <footer class="">
+    <div class="top-footer container">
       <div class="footer-list-container">
         <ul v-for="(item,index) in footerList" :key="index">
           <li>{{item.footerListTitle}}</li>
@@ -74,14 +74,15 @@ export default {
 </script>
 
 <style scoped leng="scss">
-.top-footer{
+footer{
    background-image: url("../assets/img/footer-bg.jpg");
    
 }
 .footer-list-container{
   display: flex;
   flex-wrap: wrap;
-  width:40%
+  width: 40%;
+  padding:40px 0px1;
 }
 ul{
   width:100px;

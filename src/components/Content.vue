@@ -1,8 +1,10 @@
 <template>
-  <div class="">
-    <ul>
-      <li v-for="(item,index) in contentList" :key="index"><img :src="item.menuIcon" alt=""> {{item.menuItem}}</li>     
-    </ul>
+  <div class="background">
+    <div class="container">
+      <ul>
+        <li v-for="(item,index) in contentList" :key="index"><img :src="item.menuIcon" alt=""> {{item.menuItem}}</li>     
+      </ul>
+    </div>
   </div> 
 </template>
 
@@ -39,11 +41,14 @@ export default {
 </script>
 
 <style scoped leng="scss" >
+.background{
+  background-color:#0282f9;
+
+}
 ul{
   display:flex;
   justify-content: space-between;
   align-items: center;
-  background-color:#0282f9;
   padding:50px 0px;
   color:white
 }

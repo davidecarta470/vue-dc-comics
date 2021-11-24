@@ -1,7 +1,7 @@
 <template>
-  <div >
+  <div>
     <main> 
-      <h1>
+      <h1 class="container">
       -- content goes here -- 
       </h1>
     </main>
