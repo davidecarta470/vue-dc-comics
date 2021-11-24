@@ -1,10 +1,12 @@
 <template>
   <footer>
     <div class="top-footer">
-      <ul v-for="(item,index) in footerList" :key="index">
-        <li>{{item.footerListTitle}}</li>
-        <li v-for="(subitem,index) in footerListitems" :key="index">{{subitem}}</li>
-      </ul>
+      <div class="footer-list-container">
+        <ul v-for="(item,index) in footerList" :key="index">
+          <li>{{item.footerListTitle}}</li>
+          <li v-for="(subitem) in footerList[index].footerListitems" :key="subitem">{{subitem}}</li>
+        </ul>
+      </div>
     </div>
     <div class="bottom-footer">
 
@@ -74,12 +76,23 @@ export default {
 <style scoped leng="scss">
 .top-footer{
    background-image: url("../assets/img/footer-bg.jpg");
-   height:500px;
+   
+}
+.footer-list-container{
+  display: flex;
+  flex-wrap: wrap;
+  width:40%
 }
 ul{
-  color:white;
-  list-style: none;
+  width:100px;
 }
+li:first-child{
+  color:white;
+}
+  li{
+    list-style: none;
+    color:grey;
+  }
 
 </style>
 
