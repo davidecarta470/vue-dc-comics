@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <ul>
-      <li v-for="(item,index) in contentList" :key="index"><img src="item.menuIcon" alt=""> {{item.menuItem}}</li>     
+      <li v-for="(item,index) in contentList" :key="index"><img :src="item.menuIcon" alt=""> {{item.menuItem}}</li>     
     </ul>
   </div> 
 </template>
@@ -30,7 +30,7 @@ export default {
         },
         {
           menuItem:'DC POWER VISA',
-          menuIcon:'../assets/img/buy-comics-power-visa.svg'
+          menuIcon:'../assets/img/buy-dc-power-visa.svg'
         }
       ]
     }
@@ -43,7 +43,8 @@ ul{
   display:flex;
   justify-content: space-between;
   align-items: center;
-  background-color:aqua;
-  padding:50px 0px
+  background-color:#0282f9;
+  padding:50px 0px;
+  color:white
 }
 </style>
