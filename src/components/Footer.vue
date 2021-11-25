@@ -19,7 +19,7 @@
         </div>
         <div class="bottom-right-container">
           <span>FOLLOW US!</span>
-          <ul><li v-for="item in socialLinks" :key="item"><img :src="`../assets/img/footer-${item}.png`" alt=""></li></ul>
+          <ul><li v-for="item in socialLinks" :key="item"><img :src="item" alt=""></li></ul>
         </div>
       </div>
     </div>
@@ -82,11 +82,11 @@ export default {
       ],
 
       socialLinks:[
-        'facebook',
-        'periscope',
-        'pinterest',
-        'twitter',
-        'youtube',
+          require('../assets/img/footer-facebook.png'),
+          require('../assets/img/footer-periscope.png'),
+          require('../assets/img/footer-pinterest.png'),
+          require('../assets/img/footer-twitter.png'),
+          require('../assets/img/footer-youtube.png'),
       ]
     }
   }
@@ -153,6 +153,9 @@ footer{
         @include center($align);
         ul{
           display: flex;
+          li{
+            padding-left: 20px;
+          }
         }
         span{
           align-self: center;

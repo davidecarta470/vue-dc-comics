@@ -1,20 +1,28 @@
 <template>
-  <div>
+ 
     <main> 
-     
-        <div class="series-container">
-          <div class="wrapper container">
-            <div class="item">
-              <div class="img-container">
-                <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-              </div>
-              <div class="item-text">{{series[0].series}}</div>
+      <div class="jumbotron">
+        <img src="../assets/img/jumbotron.jpg" alt="">
+      </div>
+        
+      <div class="series-container">
+        <div class="wrapper container">
+
+          <div 
+          class="item"
+          v-for="(item,index) in listSeries" :key="index"
+          >
+            <div class="img-container">
+              <img :src="item.thumb" alt="">
             </div>
+            <div class="item-text">{{item.series}}</div>
           </div>
+
         </div>
+      </div>
       
     </main>
-  </div>
+ 
 </template>
 
 
@@ -23,7 +31,7 @@ export default {
    name:'Main',
    data(){
      return{
-       series:[
+       listSeries:[
           {
             "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
             "price": "$19.99",
@@ -104,37 +112,49 @@ export default {
 
 <style scoped lang="scss">
 @import '../assets/style/mixin.scss';
-main{ 
-  position: relative;
-  min-height:100vh;
-  background-image: url("../assets/img/jumbotron.jpg");
-  background-size:cover;
+main{
+.jumbotron{
+  max-height: 50vh;
+  overflow: hidden;
+  img{
+  width: 100%;
+  }
+}
+
+ 
   .series-container{
-    @include absolute(0%,0%);
+ 
     background-color:#1c1c1c;
-    min-height: 50vh;
     width: 100%;
+     
     .wrapper{
       display: flex;
       flex-wrap:wrap;
-      padding-top:50px;
+      padding:50px 0px ;
       .item{
-      .img-container{
-        height: 200px;
-        width: 200px;
-        overflow: hidden;
+        flex-basis: calc(100%/6);
+        padding:10px;
+        .img-container{
+          height: 150px;
+          width: 150px;
+          overflow: hidden;
+          img{
+            width:150px;
+          }
         }
         .item-text{
           color:white;
+          font-size:10px;
           padding-top:20px ;
+          max-width: 120px;
         }
-
-        
       }
     }
   }
 
 }
 </style>
+
+          
   
   
