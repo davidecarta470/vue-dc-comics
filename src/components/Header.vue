@@ -75,7 +75,7 @@ export default {
 @import '../assets/style/mixin.scss';
 @import '../assets/style/vars.scss';
 header{
-  @include center($justify,$align)
+  @include center()
  
 }
 .menu-right{
@@ -83,9 +83,7 @@ header{
   font-size:12px;
 }
 ul{
-  // display:flex;
-  // justify-content: space-around;
-  @include center($justify,$align)
+  @include center($justify)
 }
   li{
     &:hover a{

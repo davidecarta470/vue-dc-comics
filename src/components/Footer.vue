@@ -142,7 +142,7 @@ footer{
     height:100px;
     display: flex;
     .container{
-      @include center($justify,$align);
+      @include center();
       button{
         border:2px solid #0282f9;
         color :white;
@@ -150,8 +150,7 @@ footer{
         background-color:transparent;
       }
       .bottom-right-container{
-        display: flex;
-        align-items:center;
+        @include center($align);
         ul{
           display: flex;
         }

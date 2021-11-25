@@ -15,24 +15,24 @@ export default {
     return{
       contentList:[
         {
+          url:require('../assets/img/buy-comics-digital-comics.png'),
           menuItem:'DIGITAL COMIX',
-          url:'../assets/img/buy-comics-digital-comics.png'
         },
         {
+          url:require('../assets/img/buy-comics-merchandise.png'),
           menuItem:'DC MERCHANDISE',
-          url:'../assets/img/buy-comics-merchandise.png'
         },
         {
+          url:require('../assets/img/buy-comics-shop-locator.png'),
           menuItem:'SUBSCRIPTION',
-          url:'../assets/img/buy-comics-shop-locator.png'
         },
         {
+          url:require('../assets/img/buy-comics-subscriptions.png'),
           menuItem:'COMIC SHOP LOCATOR',
-          url:'../assets/img/buy-comics-subscription.png'
         },
         {
+          url:require('../assets/img/buy-dc-power-visa.svg'),
           menuItem:'DC POWER VISA',
-          url:'../assets/img/buy-dc-power-visa.svg'
         }
       ]
     }
@@ -49,8 +49,17 @@ export default {
 } 
 ul{
   font-size:13px;
-  @include center($justify,$align);
+  @include center();
   padding:50px 0px;
-  color:white
+  color:white;
+  li{
+    @include center();
+    gap:10px;
+    img{
+      width:30px;
+    }
+  }
 }
 </style>
+    
+  
