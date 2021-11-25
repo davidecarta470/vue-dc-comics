@@ -99,9 +99,9 @@ ul{
    }
  }  
    
-  .active{
-    @include active();
-   }
+.active{
+  @include active();
+}
 
 
 </style>
