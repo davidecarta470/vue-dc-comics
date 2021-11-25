@@ -1,0 +1,9 @@
+@mixin active(){
+  color:#0288f9;
+  border-bottom: 5px solid #0288f9;
+}
+@mixin center($just,$align){
+  display:flex;
+  justify-content:$just;
+  align-items:$align;
+}

@@ -2,7 +2,7 @@
   <div class="background">
     <div class="container">
       <ul>
-        <li v-for="(item,index) in contentList" :key="index"><img :src="item.menuIcon" alt=""> {{item.menuItem}}</li>     
+        <li v-for="(item,index) in contentList" :key="index">{{item.menuItem}} <img :src="item.url" alt=""></li>     
       </ul>
     </div>
   </div> 
@@ -16,23 +16,23 @@ export default {
       contentList:[
         {
           menuItem:'DIGITAL COMIX',
-          menuIcon:'../assets/img/buy-comics-digital-comics.png'
+          url:'../assets/img/buy-comics-digital-comics.png'
         },
         {
           menuItem:'DC MERCHANDISE',
-          menuIcon:'../assets/img/buy-comics-merchandise.png'
+          url:'../assets/img/buy-comics-merchandise.png'
         },
         {
           menuItem:'SUBSCRIPTION',
-          menuIcon:'../assets/img/buy-comics-shop-locator.png'
+          url:'../assets/img/buy-comics-shop-locator.png'
         },
         {
           menuItem:'COMIC SHOP LOCATOR',
-          menuIcon:'../assets/img/buy-comics-subscription.png'
+          url:'../assets/img/buy-comics-subscription.png'
         },
         {
           menuItem:'DC POWER VISA',
-          menuIcon:'../assets/img/buy-dc-power-visa.svg'
+          url:'../assets/img/buy-dc-power-visa.svg'
         }
       ]
     }
@@ -40,15 +40,16 @@ export default {
 }
 </script>
 
-<style scoped leng="scss" >
+<style scoped lang="scss" >
+@import '../assets/style/mixin.scss';
+@import '../assets/style/vars.scss';
 .background{
   background-color:#0282f9;
 
-}
+} 
 ul{
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
+  font-size:13px;
+  @include center($justify,$align);
   padding:50px 0px;
   color:white
 }

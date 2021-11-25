@@ -5,11 +5,16 @@
      </div>
      <div class="menu-right">
         <ul>
-          <li v-for="(item,index) in menuList" :key="index">{{item}}</li>     
+          <li v-for="(item,index) in menuList" :key="index" >
+            <a :class="{'active': item.bool}" href=""><strong>{{item.content}}</strong></a>
+          </li>     
         </ul>
       </div> 
    </header>
 </template>
+           
+          
+         
      
 
 
@@ -20,16 +25,46 @@ export default {
   data(){
     return{
       menuList:[
-       'CHARACTERS',
-       'COMICS',
-       'MOVIES',
-       'TV',
-       'GAMES',
-       'COLLECTIBLES',
-       'VIDEO',
-       'FANS',
-       'NEWS',
-       'SHOPS',
+       { 
+        content:'CHARACTERS',
+        bool:false
+        },
+       { 
+        content:'COMICS',
+        bool:false
+        },
+       { 
+        content:'MOVIES',
+        bool:true
+        },
+       { 
+        content: 'TV',
+        bool:false
+        },
+       { 
+        content:'GAMES',
+        bool:false
+        },
+       { 
+        content:'COLLECTIBLES' ,
+        bool:false
+        },
+       { 
+        content:'VIDEO',
+        bool:false
+        },
+       { 
+        content:'FANS',
+        bool:false
+        },
+       { 
+        content:'NEWS',
+        bool:false
+        },
+       { 
+        content:'SHOPS',
+        bool:false
+        },
       ]
     }
   }
@@ -37,24 +72,42 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../assets/style/mixin.scss';
+@import '../assets/style/vars.scss';
 header{
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
+  @include center($justify,$align)
+ 
 }
 .menu-right{
   width:60%;
-  font-size:10px;
+  font-size:12px;
 }
 ul{
-  display:flex;
-  justify-content: space-around;
-  li{
-    list-style: none;
-    &:hover{
-      color:#0288f9
-    }
-  }
+  // display:flex;
+  // justify-content: space-around;
+  @include center($justify,$align)
 }
+  li{
+    &:hover a{
+      color:#0288f9;
+      border-bottom: 5px solid #0288f9;
+     }
+   a{
+     display: block;
+     height: 130px;
+     line-height:130px;
+     color:black;  
+     padding:6px; 
+   }
+ }  
+   
+  .active{
+    @include active();
+   }
+
 
 </style>
+
+ 
+
+      
