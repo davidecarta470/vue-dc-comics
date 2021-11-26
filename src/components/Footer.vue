@@ -4,6 +4,7 @@
 
       <div class="second-background">
         <div class="footer-list-container ">
+
           <ul v-for="(item,index) in footerList" :key="index">
             <li>{{item.footerListTitle}}</li>
             <li v-for="(item) in footerList[index].footerListitems" :key="item">{{item}}</li>
@@ -27,60 +28,14 @@
 </template>
 
 <script>
+import footerList from '../assets/data/footerList'
+
 export default {
    name:'Footer',
+
    data(){
     return{
-      footerList:[
-        {
-          footerListTitle:'DC COMICS',
-          footerListitems:[
-             'Characters',
-             'Comics',
-             'Movies',
-             'TV',
-             'Games',
-             'Videos',
-             'News'
-          ]
-        },
-        {
-          footerListTitle:'DC',
-          footerListitems:[
-            'Term Of Use',
-            'Privacy policy(New)',
-            'Ad Choices',
-            'Advertising',
-            'Jobs',
-            'Subscription',
-            'Talent Workshop',
-            'CPSC Certificates',
-            'Rating',
-            'Shop Help'
-          ]
-        },
-        {
-          footerListTitle:'SITES',
-          footerListitems:[
-            'Term Of Use',
-            'Privacy policy(New)',
-            'Ad Choices',
-            'Advertising',
-     
-          ]
-        },
-        {
-          footerListTitle:'SHOP',
-          footerListitems:[
-            'Term Of Use',
-            'Privacy policy(New)',
-          
-    
-          ]
-        },
-
-      ],
-
+      footerList,
       socialLinks:[
           require('../assets/img/footer-facebook.png'),
           require('../assets/img/footer-periscope.png'),

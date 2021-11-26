@@ -1,0 +1,43 @@
+export default
+[
+  { 
+   content:'CHARACTERS',
+   bool:false
+   },
+  { 
+   content:'COMICS',
+   bool:false
+   },
+  { 
+   content:'MOVIES',
+   bool:false
+   },
+  { 
+   content: 'TV',
+   bool:false
+   },
+  { 
+   content:'GAMES',
+   bool:false
+   },
+  { 
+   content:'COLLECTIBLES' ,
+   bool:false
+   },
+  { 
+   content:'VIDEO',
+   bool:false
+   },
+  { 
+   content:'FANS',
+   bool:false
+   },
+  { 
+   content:'NEWS',
+   bool:false
+   },
+  { 
+   content:'SHOPS',
+   bool:false
+   },
+ ]

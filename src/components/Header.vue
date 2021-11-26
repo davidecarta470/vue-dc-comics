@@ -1,71 +1,34 @@
 <template>
    <header class="container">
      <div>
-       <img src="../assets/img/dc-logo.png" alt="">
+       <img 
+        @click="active=-1"
+        src="../assets/img/dc-logo.png" alt=""
+       >
      </div>
      <div class="menu-right">
         <ul>
           <li v-for="(item,index) in menuList" :key="index" >
-            <a :class="{'active': item.bool}" href=""><strong>{{item.content}}</strong></a>
+            <a 
+            @click="active = item" 
+            :class="{'active': active === item}"
+            href="#"><strong>{{item.content}}</strong></a>
           </li>     
         </ul>
       </div> 
    </header>
 </template>
+       
            
-          
-         
-     
-
 
 <script>
-
+import menuList from '../assets/data/menuList'
 export default {
   name:'Header',
   data(){
     return{
-      menuList:[
-       { 
-        content:'CHARACTERS',
-        bool:false
-        },
-       { 
-        content:'COMICS',
-        bool:false
-        },
-       { 
-        content:'MOVIES',
-        bool:true
-        },
-       { 
-        content: 'TV',
-        bool:false
-        },
-       { 
-        content:'GAMES',
-        bool:false
-        },
-       { 
-        content:'COLLECTIBLES' ,
-        bool:false
-        },
-       { 
-        content:'VIDEO',
-        bool:false
-        },
-       { 
-        content:'FANS',
-        bool:false
-        },
-       { 
-        content:'NEWS',
-        bool:false
-        },
-       { 
-        content:'SHOPS',
-        bool:false
-        },
-      ]
+      active:-1,
+      menuList 
     }
   }
 }
@@ -107,5 +70,9 @@ ul{
 </style>
 
  
+          
+         
+     
+
 
       
